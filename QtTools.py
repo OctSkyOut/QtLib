@@ -97,12 +97,6 @@ class QtEventTools:
     ### QtEventTools 클레스는 PyQt를 자주사용하는 이벤트 기능들을 모아놓았습니다.
     """
 
-    # 설명 : 다른 위젯으로 페이지 이동할 때 사용
-    # 매계변수의 타입을 설정하시고, 타입을 모르겠으면 Qt Designer 객체 탐색기 슬롯을 확인하세요.
-    # ------------------------------------------
-    # 매계변수 설명
-    # currentPage = 현재 페이지 QWidget객체
-    # nextPage = 다음 페이지 QWidget객체
     def move_page(self, pagewidget: QStackedWidget, nextPage: QWidget) -> None:
         """
         ### move_page 메소드는 일반적인 다음 화면으로 넘어가기위해
@@ -134,12 +128,6 @@ class QtEventTools:
             """
             )
 
-    # 설명 : 라벨 텍스트를 바꿀 때는 reapint()를 넣어주어야함
-    # 매계변수의 타입을 설정하시고, 타입을 모르겠으면 Qt Designer 객체 탐색기 슬롯을 확인하세요.
-    # ------------------------------------------
-    # 매계변수 설명
-    # labelObj = 라벨 객체
-    # text = 라벨 객체에 새로 바꿀 텍스트
     def set_text(self, widgetObj: object, text: str):
         """
         ### set_text 메소드는 텍스트를 바꿀 때 사용하는 메소드입니다.
@@ -224,12 +212,6 @@ class QtEventTools:
         pid = os.getpid()
         os.system("kill -9 " + str(pid))
 
-    # 윈도우 사용 X 리눅스 O
-    # 설명 : 전원종료
-    # 매계변수의 타입을 설정하시고, 타입을 모르겠으면 Qt Designer 객체 탐색기 슬롯을 확인하세요.
-    # ------------------------------------------
-    # 매계변수 설명
-    # 없음
     def shut_down(self):
         """
         ### shut_down 메소드는 시스템 종료를 구현할때 사용되는 메소드입니다.
